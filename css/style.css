@@ -4,18 +4,47 @@ header{
     background-color: rgb(52, 44, 84);
     height: 90px;
     align-items: center;
+        
    
 }
 
 .logo{
     display: flex;
     justify-content: left;
-    padding: 10px;
-    
-}
+    padding: 10px 20px;}
 
 .logodelye{
 height: 70px;
 width: 70px;
 border-radius: 13px;}
+
+
+.barranavheader{
+    list-style-type: none;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    padding: 0px;
+}
+
+.itemshome{
+ padding: 20px;
+
+}
+
+.ahrefheader{
+    text-decoration: none;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buscadoryboton{
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    padding: 0px 0px 0px 430px;
+
+}
+
+
 
