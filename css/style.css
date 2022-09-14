@@ -1,12 +1,21 @@
-.logodelye{
-height: 60px;
-width: 60px;
+header{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(52, 44, 84);
+    height: 90px;
+    align-items: center;
    
 }
 
 .logo{
     display: flex;
     justify-content: left;
+    padding: 10px;
     
-    ;
 }
+
+.logodelye{
+height: 70px;
+width: 70px;
+border-radius: 13px;}
+
