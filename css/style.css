@@ -1,9 +1,20 @@
+body{
+    background: linear-gradient(rgb(48, 35, 174), rgb(116, 1, 133));
+    background-repeat: no-repeat;
+    background-size: 100000px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+   
+
+
 header{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(52, 44, 84);
+   background-color: black;
     height: 90px;
     align-items: center;
+    margin: 0px;
         
    
 }
@@ -48,6 +59,7 @@ border-radius: 13px;}
 .padre{ 
      display: flex;
     flex-wrap: wrap;
+    box-sizing: border-box;
     flex-direction: row;
     justify-content: space-evenly;
 
