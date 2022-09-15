@@ -27,36 +27,19 @@ header nav a:hover {
 header{
     display: flex;
     flex-wrap: wrap;
-   background-color: black;
+    background-color: black;
     height: 90px;
     width: 100%;
     align-items: center;
-    overflow: hidden;
     margin: initial;
     position: fixed;
 }
 
-
-footer{
+header .buscadoryboton{
     display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    flex-direction: row;
-    align-items: flex-start;
-   
-
-}
-
-.footnombres{
-    display: flex;
-    align-self: flex-end;
-    padding-left: 20px;
-}
-
-.footmail{
-    display: flex;
-    padding-right: 20px;
-    align-self: flex-end;
+    justify-content: right;
+    width: 250px;
+    margin-left: 2git00px;
 }
 
 
@@ -92,13 +75,20 @@ border-radius: 13px;}
     font-weight: 400;
 }
 
-
-.buscadoryboton{
+footer{
     display: flex;
-    justify-content: right;
-    text-align: right;
-    padding: 0px 0px 0px 270px
+    flex-wrap: wrap;
+    background-color: black;
+    flex-direction: row;
     }
+
+
+footer .footnombre{
+    display: flex;
+    padding-left: 20px;
+    justify-content: left;
+}
+
 
 .padre{ 
      display: flex;
@@ -177,3 +167,12 @@ main .padre img :hover{
 
 
 
+
+
+@media (max-device-width: 420px)
+ 
+{
+
+}
+
+    
