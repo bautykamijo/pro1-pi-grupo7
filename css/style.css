@@ -87,6 +87,7 @@ footer .footnombre{
     display: flex;
     padding-left: 20px;
     justify-content: left;
+    align-items: center;
 }
 
 
