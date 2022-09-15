@@ -116,8 +116,11 @@ background-repeat: no-repeat;
 justify-content: center;
 }
 
-main .padre img :hover{
-    background-color: aliceblue;
+.aclickeo:hover{
+    height: 330px;
+    width: 330px;
+    border-color: white;
+    
 }
 
 
