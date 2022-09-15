@@ -39,7 +39,7 @@ header .buscadoryboton{
     display: flex;
     justify-content: right;
     width: 250px;
-    margin-left: 2git00px;
+    margin-left: 200px;
 }
 
 
@@ -80,6 +80,8 @@ footer{
     flex-wrap: wrap;
     background-color: black;
     flex-direction: row;
+    align-items: flex-end;
+    
     }
 
 
@@ -162,8 +164,36 @@ main .padre img :hover{
     text-align: center;
     font-weight: 450;
 
+}
+
+
+
+/*Detalle de las Peliculas*/
+
+.bodydetailmovies{
+    background-image: url(../img/fondodepantallaThor.jpg);
+    background-repeat: no-repeat;
+    
 
 }
+
+.imagenThor{
+    width: 20%;
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
