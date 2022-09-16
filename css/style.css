@@ -35,7 +35,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     background-color: black;
-    height: 12%;
+    height: 16%;
     width: 100%;
     align-items: center;
     margin: 0;
@@ -54,10 +54,10 @@ header div{
     width: 30%;
 }
 
-.logo{
+.logo {
     display: flex;
     justify-content: left;
-    padding: 10px 20px;}
+    padding: 0% 2%;}
 
 .logodelye{
 height: 70px;
@@ -278,7 +278,7 @@ justify-content: center;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     margin: 3%;
 }
@@ -286,6 +286,7 @@ justify-content: center;
 .generofather .hijogenero {
     display: flex;
     justify-content: center;
+    width: 41%;
 }
 
 .generofather article{
@@ -321,8 +322,25 @@ justify-content: center;
     padding-right: 1%;
 }
 
+.generoseries{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 
+.generopeliculas{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
 
+.generofather div h2{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3%;
+}
 
 
 @media (max-device-width: 420px)
