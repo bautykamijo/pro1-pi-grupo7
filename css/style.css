@@ -34,17 +34,21 @@ header{
     height: 100px;
     width: 100%;
     align-items: center;
-    margin: initial;
+    margin: 0;
     position: fixed;
 }
 
 header .buscadoryboton{
     display: flex;
     justify-content: right;
-    width: 250px;
-    margin-left: 200px;
+    width: 250px; 
 }
 
+.divheader{
+    display: flex;
+    justify-content: right;
+    width: 32%;
+}
 
 .logo{
     display: flex;
