@@ -16,6 +16,10 @@ h2{
     margin: 20px;
 }
 
+header nav{
+    width: 60%;
+}
+
 header nav a{
     padding: 10px 10px;
 }
@@ -31,7 +35,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     background-color: black;
-    height: 100px;
+    height: 13%;
     width: 100%;
     align-items: center;
     margin: 0;
@@ -47,7 +51,7 @@ header .buscadoryboton{
 header div{
     display: flex;
     justify-content: right;
-    width: 32%;
+    width: 30%;
 }
 
 .logo{
@@ -60,7 +64,11 @@ height: 70px;
 width: 70px;
 border-radius: 13px;}
 
-
+header form{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
 
 .barranavheader{
     list-style-type: none;
@@ -71,7 +79,7 @@ border-radius: 13px;}
 }
 
 .itemshome{
- padding: 20px;
+ padding: 0 2%;
 
 }
 
@@ -294,8 +302,19 @@ justify-content: center;
     justify-content: center;
 }
 
+.seriesfav{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 20px;
+}
 
-
+.hijofav{
+    padding-left: 2%;
+    padding-right: 1%;
+}
 
 
 
