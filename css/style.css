@@ -31,7 +31,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     background-color: black;
-    height: 90px;
+    height: 100px;
     width: 100%;
     align-items: center;
     margin: initial;
@@ -117,10 +117,8 @@ justify-content: center;
 }
 
 .aclickeo:hover{
-    height: 330px;
+    height: 320px;
     width: 330px;
-    border-color: white;
-    
 }
 
 
@@ -262,8 +260,35 @@ justify-content: center;
 
 
 
+/*Generos*/
 
+.generofather{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px;
+}
 
+.generofather article{
+    display: flex;
+align-items: center;
+height: 300px;
+width: 20%;
+background-repeat: no-repeat;
+justify-content: center;
+}
+
+.generofather img{
+    width: 75%;
+    height: 70%;
+    border-radius: 153px;
+}
+
+.generofather a{
+    justify-content: center;
+}
 
 
 
