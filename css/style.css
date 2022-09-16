@@ -1,21 +1,306 @@
+body{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+.bodydegrade{
+    background: linear-gradient(rgb(11, 2, 88), rgb(65, 4, 101));
+    background-repeat: no-repeat;
+    background-size: 100000px;
+}
+   
+h2{
+    padding: 0px 35px;
+    font-size: 26px;
+    margin: 20px;
+}
+
+header nav a{
+    padding: 10px 10px;
+}
+
+header nav a:hover {
+    
+    background-color: rgb(23, 12, 122);
+    border-radius: 20px;
+
+}
+
 header{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(52, 44, 84);
-    height: 90px;
+    background-color: black;
+    height: 100px;
+    width: 100%;
     align-items: center;
-   
+    margin: initial;
+    position: fixed;
 }
+
+header .buscadoryboton{
+    display: flex;
+    justify-content: right;
+    width: 250px;
+    margin-left: 200px;
+}
+
 
 .logo{
     display: flex;
     justify-content: left;
-    padding: 10px;
-    
-}
+    padding: 10px 20px;}
 
 .logodelye{
 height: 70px;
 width: 70px;
 border-radius: 13px;}
 
+
+
+.barranavheader{
+    list-style-type: none;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    padding: 0px;
+}
+
+.itemshome{
+ padding: 20px;
+
+}
+
+.ahrefheader{
+    text-decoration: none;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    flex-direction: row;
+    align-items: flex-end;
+    
+
+    }
+
+
+footer .footnombre{
+    display: flex;
+    padding-left: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.padre{ 
+     display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px;
+
+}
+
+.cuadrado{
+display: flex;
+align-items: center;
+height: 300px;
+width: 20%;
+background-repeat: no-repeat;
+justify-content: center;
+}
+
+.aclickeo:hover{
+    height: 320px;
+    width: 330px;
+}
+
+
+.thor{
+    
+    align-self: center;
+   height: 300px;
+   width: 17%;}
+
+.mini{
+   
+    align-self: center;
+    height: 300px;
+    width: 17%;
+}
+.topg{
+    
+    align-self: center;
+    height: 300px;
+    width: 17%;
+    
+    
+}
+.noch{
+    
+    align-self: center;
+    height: 300px;
+    width: 17%;
+}
+.elvis{
+    align-self: center;
+    height: 300px;
+    width: 17%;
+}
+.img1{
+    width: 100%;
+    height: 95%;
+    border-radius: 23px;
+}
+
+.aclickeo {
+    width: 100%;
+    height: 100%;
+    border-radius: 23px;
+    text-decoration: none;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 450;
+
+}
+
+
+
+/*Detalle de las Peliculas*/
+
+.bodydetailmovies{
+    background-image: url(../img/fondodepantallaThor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+    
+
+}
+
+
+.padrethor{
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    margin: 30px;
+
+}
+
+.articulo{
+    margin: 0px;
+    margin-left: -20px;
+}
+
+.hijothor{
+    padding-right: 10px;
+}
+
+.hijosinopsis{
+    padding: 15px 40px;
+    background-color: rgba(10, 0, 0, 0.49);
+
+
+}
+
+.articulo h3{
+    font-size: 27px;
+}
+
+.articulo h4{
+    font-size: 20px;
+}
+
+.articulo p{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.imagenThor{
+    width: 420px;
+    height: 420px;
+    padding: 25px 40px;
+    border-radius: 270px;
+}
+
+.titulos{
+    padding: 0px 35px;
+    font-size: 45px;
+    margin: 23px;
+    padding-bottom: 30px;
+
+}
+
+.articulo h4 .estrellita{
+    padding: 10px 7px;
+}
+
+.hijosinopsis h4 a{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+
+}
+
+
+/*Detalle de las Series*/
+
+
+.bodydetailseries{
+    background-image: url(../img/fondostrangerthingsdetail.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+
+
+/*Generos*/
+
+.generofather{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.generofather article{
+    display: flex;
+align-items: center;
+height: 300px;
+width: 20%;
+background-repeat: no-repeat;
+justify-content: center;
+}
+
+.generofather img{
+    width: 75%;
+    height: 70%;
+    border-radius: 100px;
+}
+
+.generofather a{
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+@media (max-device-width: 420px)
+ 
+{
+
+}
+
+    
