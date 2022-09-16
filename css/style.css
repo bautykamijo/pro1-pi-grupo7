@@ -35,7 +35,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     background-color: black;
-    height: 13%;
+    height: 12%;
     width: 100%;
     align-items: center;
     margin: 0;
@@ -45,7 +45,7 @@ header{
 header .buscadoryboton{
     display: flex;
     justify-content: right;
-    width: 250px; 
+    width: 55%; 
 }
 
 header div{
@@ -278,9 +278,14 @@ justify-content: center;
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 3%;
+}
+
+.generofather .hijogenero {
+    display: flex;
+    justify-content: center;
 }
 
 .generofather article{
@@ -299,7 +304,7 @@ justify-content: center;
 }
 
 .generofather a{
-    justify-content: center;
+    text-align: center;
 }
 
 .seriesfav{
