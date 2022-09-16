@@ -44,7 +44,7 @@ header .buscadoryboton{
     width: 250px; 
 }
 
-.divheader{
+header div{
     display: flex;
     justify-content: right;
     width: 32%;
