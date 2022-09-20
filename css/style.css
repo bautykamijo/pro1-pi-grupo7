@@ -343,9 +343,351 @@ justify-content: center;
 }
 
 
-@media (max-device-width: 420px)
- 
-{
+@media (max-device-width: 420px){
+body{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+.bodydegrade{
+    background: linear-gradient(rgb(11, 2, 88), rgb(65, 4, 101));
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+   
+h2{
+    padding: 0px 25px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+header nav{
+    width: 60%;
+}
+
+header nav a{
+    padding: 5px 5px;
+}
+
+header nav a:hover {
+    
+    background-color: rgb(23, 12, 122);
+    border-radius: 10px;
+
+}
+
+header{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    height: 13%;
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    position: fixed;
+}
+
+header .buscadoryboton{
+    display: flex;
+    justify-content: right;
+    width: 55%; 
+}
+
+header div{
+    display: flex;
+    justify-content: right;
+    width: 30%;
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+    padding: 0% 2%;}
+
+.logodelye{
+height: 35px;
+width: 35px;
+border-radius: 7px;}
+
+header form{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.barranavheader{
+    list-style-type: none;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    padding: 0px;
+}
+
+.itemshome{
+ padding: 0 2%;
+
+}
+
+.ahrefheader{
+    text-decoration: none;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    flex-direction: row;
+    align-items: flex-end;
+    
+
+    }
+
+
+footer .footnombre{
+    display: flex;
+    padding-left: 10px;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.padre{ 
+     display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+
+}
+
+.cuadrado{
+display: flex;
+align-items: center;
+height: 150px;
+width: 20%;
+background-repeat: no-repeat;
+justify-content: center;
+}
+
+.aclickeo:hover{
+    height: 160px;
+    width: 160px;
+}
+
+
+.thor{
+    
+    align-self: center;
+   height: 150px;
+   width: 17%;}
+
+.mini{
+   
+    align-self: center;
+    height: 150px;
+    width: 17%;
+}
+.topg{
+    
+    align-self: center;
+    height: 150px;
+    width: 17%;
+    
+    
+}
+.noch{
+    
+    align-self: center;
+    height: 150px;
+    width: 17%;
+}
+.elvis{
+    align-self: center;
+    height: 150px;
+    width: 17%;
+}
+.img1{
+    width: 100%;
+    height: 95%;
+    border-radius: 18px;
+}
+
+.aclickeo {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    text-decoration: none;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-weight: 450;
+
+}
+
+
+
+/*Detalle de las Peliculas*/
+
+.bodydetailmovies{
+    background-image: url(../img/fondodepantallaThor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+    
+
+}
+
+
+.padrethor{
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    margin: 15px;
+
+}
+
+.articulo{
+    margin: 0px;
+    margin-left: -10px;
+}
+
+.hijothor{
+    padding-right: 5px;
+}
+
+.hijosinopsis{
+    padding: 8px 20px;
+    background-color: rgba(10, 0, 0, 0.49);
+
+
+}
+
+.articulo h3{
+    font-size: 17px;
+}
+
+.articulo h4{
+    font-size: 10px;
+}
+
+.articulo p{
+    font-size: 8px;
+    font-weight: 500;
+}
+
+.imagenThor{
+    width: 220px;
+    height: 220px;
+    padding: 14px 20px;
+    border-radius: 140px;
+}
+
+.titulos{
+    padding: 0px 17px;
+    font-size: 30px;
+    margin: 18px;
+    padding-bottom: 15px;
+
+}
+
+.articulo h4 .estrellita{
+    padding: 10px 7px;
+}
+
+.hijosinopsis h4 a{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+
+}
+
+
+/*Detalle de las Series*/
+
+
+.bodydetailseries{
+    background-image: url(../img/fondostrangerthingsdetail.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+
+
+/*Generos*/
+
+.generofather{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 3%;
+}
+
+.generofather .hijogenero {
+    display: flex;
+    justify-content: center;
+    width: 41%;
+}
+
+.generofather article{
+    display: flex;
+align-items: center;
+height: 300px;
+width: 20%;
+background-repeat: no-repeat;
+justify-content: center;
+}
+
+.generofather img{
+    width: 75%;
+    height: 70%;
+    border-radius: 50px;
+}
+
+.generofather a{
+    text-align: center;
+}
+
+.seriesfav{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.hijofav{
+    padding-left: 2%;
+    padding-right: 1%;
+}
+
+.generoseries{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.generopeliculas{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.generofather div h2{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3%;
+}
+
 
 }
 
