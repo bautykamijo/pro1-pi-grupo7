@@ -618,14 +618,9 @@ background-repeat: no-repeat;
 justify-content: center;
 }
 
-.generofather img{
-    width: 75%;
-    height: 70%;
-    border-radius: 50px;
-}
 
 .generofather a{
-    text-align: center;
+    text-align: start;
 }
 
 .seriesfav{
@@ -669,7 +664,7 @@ justify-content: center;
 .generofather img {
     width: 150%;
     height: 50%;
-    border-radius: 50px;
+    border-radius: 950px;
 }
 }
 
