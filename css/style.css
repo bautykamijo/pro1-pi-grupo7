@@ -1,3 +1,4 @@
+
 body{
     color: white;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -112,7 +113,7 @@ footer .footnombre{
 
 .padre{ 
      display: flex;
-    flex-wrap: wrap;
+     flex-wrap: wrap;
     box-sizing: border-box;
     flex-direction: row;
     justify-content: space-evenly;
@@ -120,15 +121,15 @@ footer .footnombre{
 
 }
 
-.cuadrado{
-display: flex;
-align-items: center;
-height: 300px;
-width: 20%;
-background-repeat: no-repeat;
-justify-content: center;
 
-}
+
+.cuadrado{
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    
+    }
 
 .aclickeo:hover{
     height: 320px;
@@ -172,6 +173,7 @@ justify-content: center;
     height: 300px;
     width: 17%;
 }
+
 .img1{
     width: 100%;
     height: 95%;
