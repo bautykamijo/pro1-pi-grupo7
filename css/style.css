@@ -28,6 +28,7 @@ header nav a:hover {
     
     background-color: rgb(23, 12, 122);
     border-radius: 20px;
+    font-weight: 700;
 
 }
 
@@ -126,13 +127,19 @@ height: 300px;
 width: 20%;
 background-repeat: no-repeat;
 justify-content: center;
+
 }
 
 .aclickeo:hover{
     height: 320px;
     width: 330px;
+    font-weight: 700;
 }
 
+.img1:hover{
+    border: solid 5px white;
+
+}
 
 .thor{
     
