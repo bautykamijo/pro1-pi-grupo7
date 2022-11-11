@@ -245,14 +245,16 @@ footer .footnombre{
 }
 
 .imagenThor{
+  
     width: 420px;
     height: 420px;
     padding: 25px 40px;
-    border-radius: 270px;
+    border-radius: 70px;
+    
 }
 
 .titulos{
-    padding: 0px 35px;
+    padding: 0px 80px;
     font-size: 45px;
     margin: 23px;
     padding-bottom: 30px;
