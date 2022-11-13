@@ -1,11 +1,11 @@
-apiKey = '20ad67ce31acb5c646fe21c26a0d44f1'
-urlPopular = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`
-urlSeries = `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=en-US&page=1`
-urlTendencias = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`
+let apiKey = '20ad67ce31acb5c646fe21c26a0d44f1';
+let urlPopular = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+let urlSeries = `https://api.themoviedb.org/3/tv/popular?api_key=${apiKey}&language=en-US&page=1`;
+let urlTendencias = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`;
 
-let listaPopulares = document.querySelector('.populares')
-let seriesPopulares = document.querySelector('.seriesPopu')
-let tendencias = document.querySelector('.tendencias')
+let listaPopulares = document.querySelector('.populares');
+let seriesPopulares = document.querySelector('.seriesPopu');
+let tendencias = document.querySelector('.tendencias');
 
 
 
