@@ -1,8 +1,6 @@
 let form = document.querySelector('form');
 let input = document.querySelector('.buscadoryboton')
 
-console.log(form, input);
-
 form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (input.value == '') {

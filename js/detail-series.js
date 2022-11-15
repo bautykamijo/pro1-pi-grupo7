@@ -4,9 +4,20 @@ let idSeries = qsObj.get('idSeries');
 
 apiKey = '20ad67ce31acb5c646fe21c26a0d44f1';
 urlDetalles = `https://api.themoviedb.org/3/tv/${idSeries}?api_key=${apiKey}&language=en-US`;
+urlProviders = `https://api.themoviedb.org/3/tv/${idSeries}/watch/providers?api_key=${apiKey}`;
+let urlReco = `https://api.themoviedb.org/3/tv/${idSeries}/recommendations?api_key=${apiKey}&language=en-US&page=1`;
+
 
 let titulo = document.querySelector('.tituloSeries');
-let detalleSeries = document.querySelector('.padrethor');
+let img = document.querySelector('.imagenThor');
+let estreno = document.querySelector('.estreno');
+let popularidad = document.querySelector('.popularidad');
+let duracion = document.querySelector('.duracion');
+let overview = document.querySelector('.overview');
+let genero = document.querySelector('.genero');
+let boton = document.querySelector('.botonera');
+let provider = document.querySelector('.provider');
+
 
 fetch(urlDetalles)
 .then(function(response) {
@@ -15,24 +26,21 @@ fetch(urlDetalles)
 .then(function(data) {
   console.log(data);
   titulo.innerText = data.name + ' ' + ` (${data.first_air_date})`
-  let generos = ''
+  let generos = '';
   for (let i = 0; i < data.genres.length; i++) {
    if (i == (data.genres.length)- 1) {
-        generos += data.genres[i].name
+        generos += data.genres[i].name;
     } else {
-        generos += data.genres[i].name + ' -' + ' '
+        generos += data.genres[i].name + ' -' + ' ';
     }}
-    detalleSeries.innerHTML = `<article class="articulo hijothor"><img class="imagenThor" src="https://image.tmdb.org/t/p/w500/${data.poster_path}" alt=""></article>
-                        <article class="articulo hijosinopsis">
-                            <h3>Sinopsis</h3>
-                            <p>${data.overview}</p>
-                            <h4>Fecha de estreno: ${data.first_air_date}</h4>
-                            <h4>Popularidad: ${data.popularity}</h4>
-                            <h4>Número de temporadas: ${data.number_of_seasons}</h4>
-                            <h4><a href="./genres.html">Generos: </a><a href="./detail-genres.html?idGenero=">${generos}</a></h4>
-                            <h4>Añadir a FAVORITOS: <a href="./favorite.html"><i class="fa-solid fa-star"></i></a></h4>
-                            <h4></h4>
-                        </article>`
+    img.src = `https://image.tmdb.org/t/p/w500/${data.poster_path}`;
+    overview.innerText = `${data.overview}`;
+    estreno.innerText = `Fecha de estreno: ${data.first_air_date}`;
+    popularidad.innerText = `Popularidad: ${data.popularity}`;
+    duracion.innerText = `Número de temporadas: ${data.number_of_seasons}`;
+    genero.innerText = `${generos}`;
+    boton.innerText = 'Ver recomendaciones';
+    seccion.style.display = 'none';
 
   return data;
 })
@@ -40,3 +48,33 @@ fetch(urlDetalles)
     console.log(error);
   return error;
 })
+
+fetch(urlReco)
+.then(function (response) {
+    return response.json()
+}
+)
+.then(function (data) {
+  console.log('RECOMENDACIONES',data);
+  for (let i = 0; i < 5; i++) {
+    let popular = data.results[i];
+    seccion.innerHTML  += ` <article class="cuadrado thor"> 
+    <a class="imagenreco" href="./detail-series.html?idSeries=${popular.id}">
+    <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
+    ${popular.name} (${popular.first_air_date})
+    </a>
+    </article> `
+    
+  }
+
+  boton.addEventListener('click', function (e) {
+    seccion.style.display = 'flex';
+    
+  })
+    return data;
+}
+)
+.catch(function (error) {
+    return error;
+}
+)
