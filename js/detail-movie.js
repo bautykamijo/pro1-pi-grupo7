@@ -7,7 +7,7 @@ urlDetalles = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${apiKey
 urlProviders = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/providers?api_key=${apiKey}`;
 let urlReco = `https://api.themoviedb.org/3/movie/${idPelicula}/recommendations?api_key=${apiKey}&language=en-US&page=1`;
 let urlReviews = `https://api.themoviedb.org/3/movie/${idPelicula}/reviews?api_key=${apiKey}&language=en-US&page=1`;
-let urlGeneros
+let urlGeneros = ``
 
 let titulo = document.querySelector('.peliculaDetalle');
 let img = document.querySelector('.imagenThor');
@@ -25,6 +25,7 @@ let favorites = document.querySelector('.favorites');
 let reviews = document.querySelector('.reviews');
 let contenido = document.querySelector('.contenido');
 let autor = document.querySelector('.autor');
+let favoritismo = document.querySelector('.favoritismo')
 
 fetch(urlDetalles)
 .then(function(response) {
@@ -51,7 +52,7 @@ duracion.innerText = `Duración: ${data.runtime}m`;
 generoGlobal.innerText = 'Generos: '
 genero.innerText = `${generos}`;
 boton.innerText = 'Ver recomendaciones';
-favorites.innerHTML = `Añadir a FAVORITOS: <a class="favoritismo" href="./favorite.html?idPelicula=${data.id}"><i class="fa-solid fa-star"></i></a>`
+favorites.innerHTML = `Añadir a FAVORITOS: <i class="fa-solid fa-star favoritismo"></i>`
 seccion.style.display = 'none';
 let estrellita = document.querySelector('.favoritismo');
 
@@ -119,12 +120,6 @@ fetch(urlReco)
 }
 )
 
-
-
-
-
-
-
 fetch(urlReviews)
 .then(function (response) {
     return response.json()
@@ -157,6 +152,37 @@ fetch(urlReviews)
 }
 )
 
+
+let peliculasFav = [];
+
+let recuperoStorage = localStorage.getItem("peliculasFav");
+
+if(recuperoStorage != null){
+  peliculasFav = JSON.parse(recuperoStorage);
+}
+
+if (peliculasFav.includes(idPelicula)) {
+  favoritismo.style.color = 'rgb(255, 204, 0)';
+}
+
+favoritismo.addEventListener('click', function (e) {
+  e.preventDefault();
+  
+  if(peliculasFav.includes(idPelicula)){
+      let indice = peliculasFav.indexOf(idPelicula);
+      peliculasFav.splice(indice,1);
+      favoritismo.style.color = 'none';
+  }else{
+      peliculasFav.push(idPelicula);
+      favoritismo.style.color = 'rgb(255, 204, 0)';
+  }
+
+ 
+  let favToString = JSON.stringify(peliculasFav);
+
+  localStorage.setItem('peliculasFav',favToString);
+  
+});
 
 
 

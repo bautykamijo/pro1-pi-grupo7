@@ -17,6 +17,7 @@ let duracion = document.querySelector('.duracion');
 let overview = document.querySelector('.overview');
 let genero = document.querySelector('.genero');
 let boton = document.querySelector('.botonera');
+let seccion = document.querySelector('.padre');
 let provider = document.querySelector('.provider');
 let reviews = document.querySelector('.reviews');
 let contenido = document.querySelector('.contenido');
@@ -53,37 +54,6 @@ fetch(urlDetalles)
   return error;
 })
 
-fetch(urlReco)
-.then(function (response) {
-    return response.json()
-}
-)
-.then(function (data) {
-  console.log('RECOMENDACIONES',data);
-  for (let i = 0; i < 5; i++) {
-    let popular = data.results[i];
-    seccion.innerHTML  += ` <article class="cuadrado thor"> 
-    <a class="imagenreco" href="./detail-series.html?idSeries=${popular.id}">
-    <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
-    ${popular.name} (${popular.first_air_date})
-    </a>
-    </article> `
-    
-  }
-
-  boton.addEventListener('click', function (e) {
-    seccion.style.display = 'flex';
-    
-  })
-    return data;
-}
-)
-.catch(function (error) {
-    return error;
-}
-)
-
-
 
 fetch(urlReviews)
 .then(function (response) {
@@ -118,3 +88,32 @@ fetch(urlReviews)
 )
 
 
+fetch(urlReco)
+.then(function (response) {
+    return response.json()
+}
+)
+.then(function (data) {
+  console.log('RECOMENDACIONES',data);
+  for (let i = 0; i < 10; i++) {
+    let popular = data.results[i];
+    seccion.innerHTML  += ` <article class="cuadrado thor uk-slider-items"> 
+    <a class="imagenreco" href="./detail-serie.html?idSeries=${popular.id}">
+    <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
+    ${popular.name} (${popular.first_air_date})
+    </a>
+    </article> `
+    
+  }
+
+  boton.addEventListener('click', function (e) {
+    seccion.style.display = 'flex'
+    
+  })
+    return data;
+}
+)
+.catch(function (error) {
+    return error;
+}
+)
