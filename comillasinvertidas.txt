@@ -14,3 +14,95 @@ fetch(urlForm)
     return error;
 }
 )
+
+
+######
+
+let qs = location.search;
+let qsObj = new URLSearchParams(qs);
+let idPelicula = qsObj.get('idPelicula');
+
+let apiKey = '20ad67ce31acb5c646fe21c26a0d44f1';
+let urlDetalles = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${apiKey}&language=en-US`;
+
+let peliculasFav = [];
+let recuperoStorage = localStorage.getItem("favoritas");
+let favoritas = JSON.parse(recuperoStorage);
+let section = document.querySelector("#lista");
+
+
+
+if (favoritas == null || favoritas.length == 0)
+{
+
+
+} else
+    for (let i = 0; i < favoritas.length; i++);
+        fetch(urlDetalles)
+        .then(function (response) {
+            return response.json();
+            
+        }) .then(function (data) {
+        console.log('nelson',data);
+        peliculasFav += `<article>
+                                    <img src=${data.image} alt='${data.name}' />
+                                    <p>Name: <a href="./favorite.html?idPelicula=${idPelicula}</a> </p>
+                                    </article>`;
+        section.innerHTML = peliculasFav;
+
+        return data;
+        }).catch(function (error) {
+        return error;
+        })
+
+
+
+
+
+
+
+        #############
+
+
+
+
+let favoritos = [];
+
+
+let recuperoStorage = localStorage.getItem('favoritos');
+
+if(recuperoStorage != null){
+    favoritos = JSON.parse(recuperoStorage);
+};
+
+
+if (favoritos.includes(idPelicula)) {
+    favorites.innerText="Quitar de Favorito";
+}
+
+
+
+
+
+estrellita.addEventListener("click",function (e) {
+    e.preventDefault()
+    
+
+    if(favoritos.includes(id)){
+        let indice = favoritos.indexOf(id);
+        favoritos.splice(indice,1);
+        
+    }else{
+
+        favoritos.push(id);
+       
+    }
+
+    /* Si lo incluye o no, quiero poder subir el array al localStorage ->
+    Pero tengo que pasarlo a JSON primeramente*/
+    let favToString = JSON.stringify(favoritos);
+/*      ["2","4","5"]                [2,4,5]        */
+    /* Cuando este en JSON ahora si puedo subirlo al localStorage */
+    localStorage.setItem('favoritos',favToString)
+    
+});

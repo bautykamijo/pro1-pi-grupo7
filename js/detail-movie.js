@@ -6,6 +6,8 @@ apiKey = '20ad67ce31acb5c646fe21c26a0d44f1';
 urlDetalles = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${apiKey}&language=en-US`;
 urlProviders = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/providers?api_key=${apiKey}`;
 let urlReco = `https://api.themoviedb.org/3/movie/${idPelicula}/recommendations?api_key=${apiKey}&language=en-US&page=1`;
+let urlReviews = `https://api.themoviedb.org/3/movie/${idPelicula}/reviews?api_key=${apiKey}&language=en-US&page=1`;
+let urlGeneros
 
 let titulo = document.querySelector('.peliculaDetalle');
 let img = document.querySelector('.imagenThor');
@@ -19,7 +21,10 @@ let boton = document.querySelector('.botonera');
 let seccion = document.querySelector('.padre');
 let generoGlobal = document.querySelector('.generoGlobal');
 let generalizado = document.querySelector('.generalizado');
-
+let favorites = document.querySelector('.favorites');
+let reviews = document.querySelector('.reviews');
+let contenido = document.querySelector('.contenido');
+let autor = document.querySelector('.autor');
 
 fetch(urlDetalles)
 .then(function(response) {
@@ -46,7 +51,10 @@ duracion.innerText = `Duración: ${data.runtime}m`;
 generoGlobal.innerText = 'Generos: '
 genero.innerText = `${generos}`;
 boton.innerText = 'Ver recomendaciones';
+favorites.innerHTML = `Añadir a FAVORITOS: <a class="favoritismo" href="./favorite.html?idPelicula=${data.id}"><i class="fa-solid fa-star"></i></a>`
 seccion.style.display = 'none';
+let estrellita = document.querySelector('.favoritismo');
+
 
   return data;
 })
@@ -88,9 +96,9 @@ fetch(urlReco)
 )
 .then(function (data) {
   console.log('RECOMENDACIONES',data);
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 10; i++) {
     let popular = data.results[i];
-    seccion.innerHTML  += ` <article class="cuadrado thor"> 
+    seccion.innerHTML  += ` <article class="cuadrado thor uk-slider-items"> 
     <a class="imagenreco" href="./detail-movie.html?idPelicula=${popular.id}">
     <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
     ${popular.title} (${popular.release_date})
@@ -110,3 +118,54 @@ fetch(urlReco)
     return error;
 }
 )
+
+
+
+
+
+
+
+fetch(urlReviews)
+.then(function (response) {
+    return response.json()
+}
+)
+.then(function (data) {
+  console.log('REVIEWS' , data);
+  reviews.innerHTML = `Para ver las reseñas:  <strong style="text-decoration: underline;"> Haz click aqui</strong>`
+  let info = ''
+  if (data.results.length == 0) {
+    reviews.innerText = 'Reviews: ¡No hay reseñas disponibles!'
+    } else {
+  for (let i = 0; i < data.results.length; i++) {
+    autor.innerHTML += `<li class="contenido"><strong style="text-decoration: underline;"> ${data.results[i].author}:</strong> ${data.results[i].content}</li>
+    <br><br>` 
+    }
+  }
+  autor.style.display = 'none';
+  reviews.addEventListener('click', function (e) {
+    autor.style.display = 'block';
+    
+  })
+  
+    return data;
+}
+)
+.catch(function (error) {
+  console.log(error);
+    return error;
+}
+)
+
+
+
+
+
+
+
+
+
+
+
+
+

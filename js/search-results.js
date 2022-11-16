@@ -11,6 +11,10 @@ let listaBusqueda = document.querySelector('.buscaPelis');
 let tituloSeries = document.querySelector('.titularSeries');
 let listaSeries = document.querySelector('.buscaSeries');
 
+window.addEventListener('load', function (e) {
+    this.document.querySelector('#loader').classList.toggle('loader2')
+})
+
 fetch(urlFormMovies)
 .then(function (response) {
     return response.json()
@@ -70,5 +74,7 @@ fetch(urlFormSeries)
     return error;
 }
 )
+
+
 
 

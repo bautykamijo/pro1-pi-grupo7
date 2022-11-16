@@ -6,6 +6,7 @@ apiKey = '20ad67ce31acb5c646fe21c26a0d44f1';
 urlDetalles = `https://api.themoviedb.org/3/tv/${idSeries}?api_key=${apiKey}&language=en-US`;
 urlProviders = `https://api.themoviedb.org/3/tv/${idSeries}/watch/providers?api_key=${apiKey}`;
 let urlReco = `https://api.themoviedb.org/3/tv/${idSeries}/recommendations?api_key=${apiKey}&language=en-US&page=1`;
+let urlReviews = `https://api.themoviedb.org/3/tv/${idSeries}/reviews?api_key=${apiKey}&language=en-US&page=1`;
 
 
 let titulo = document.querySelector('.tituloSeries');
@@ -17,6 +18,9 @@ let overview = document.querySelector('.overview');
 let genero = document.querySelector('.genero');
 let boton = document.querySelector('.botonera');
 let provider = document.querySelector('.provider');
+let reviews = document.querySelector('.reviews');
+let contenido = document.querySelector('.contenido');
+let autor = document.querySelector('.autor');
 
 
 fetch(urlDetalles)
@@ -78,3 +82,39 @@ fetch(urlReco)
     return error;
 }
 )
+
+
+
+fetch(urlReviews)
+.then(function (response) {
+    return response.json()
+}
+)
+.then(function (data) {
+  console.log('REVIEWS' , data);
+  reviews.innerHTML = `Para ver las reseñas:  <strong style="text-decoration: underline;"> Haz click aqui</strong>`
+  let info = ''
+  if (data.results.length == 0) {
+    reviews.innerText = 'Reviews: ¡No hay reseñas disponibles!'
+    } else {
+  for (let i = 0; i < data.results.length; i++) {
+    autor.innerHTML += `<li class="contenido"><strong style="text-decoration: underline;"> ${data.results[i].author}:</strong> ${data.results[i].content}</li>
+    <br><br>` 
+    }
+  }
+  autor.style.display = 'none';
+  reviews.addEventListener('click', function (e) {
+    autor.style.display = 'block';
+    
+  })
+  
+    return data;
+}
+)
+.catch(function (error) {
+  console.log(error);
+    return error;
+}
+)
+
+
