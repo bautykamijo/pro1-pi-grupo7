@@ -2,7 +2,7 @@ let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let idPelicula = qsObj.get('idPelicula');
 
-apiKey = '20ad67ce31acb5c646fe21c26a0d44f1';
+let apiKey = '20ad67ce31acb5c646fe21c26a0d44f1';
 urlDetalles = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${apiKey}&language=en-US`;
 urlProviders = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/providers?api_key=${apiKey}`;
 let urlReco = `https://api.themoviedb.org/3/movie/${idPelicula}/recommendations?api_key=${apiKey}&language=en-US&page=1`;
@@ -52,7 +52,7 @@ duracion.innerText = `Duración: ${data.runtime}m`;
 generoGlobal.innerText = 'Generos: '
 genero.innerText = `${generos}`;
 boton.innerText = 'Ver recomendaciones';
-favorites.innerHTML = `Añadir a FAVORITOS: <i class="fa-solid fa-star favoritismo"></i>`
+favorites.style.color = 'white'
 seccion.style.display = 'none';
 let estrellita = document.querySelector('.favoritismo');
 
@@ -162,7 +162,13 @@ if(recuperoStorage != null){
 }
 
 if (peliculasFav.includes(idPelicula)) {
+  favoritismo.innerHTML = `Quitar de Favoritos <i class="fa-solid fa-star"></i>`
   favoritismo.style.color = 'rgb(255, 204, 0)';
+}
+else{
+  favoritismo.innerHTML = `Añadir a Favoritos <i class="fa-solid fa-star"></i>`
+  favoritismo.style.color = 'white';
+
 }
 
 favoritismo.addEventListener('click', function (e) {
@@ -171,10 +177,14 @@ favoritismo.addEventListener('click', function (e) {
   if(peliculasFav.includes(idPelicula)){
       let indice = peliculasFav.indexOf(idPelicula);
       peliculasFav.splice(indice,1);
-      favoritismo.style.color = 'none';
+      favoritismo.style.color = 'white';
+      favoritismo.innerHTML = `Añadir a Favoritos <i class="fa-solid fa-star"></i>`
+
   }else{
       peliculasFav.push(idPelicula);
       favoritismo.style.color = 'rgb(255, 204, 0)';
+      favoritismo.innerHTML = `Quitar de Favoritos <i class="fa-solid fa-star"></i>`
+
   }
 
  
