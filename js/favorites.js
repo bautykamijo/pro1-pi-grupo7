@@ -10,7 +10,6 @@ let section = document.querySelector(".pelisFav");
 let favoritos = ''; 
 console.log(peliculasFav);
 
-/* EVALUAR SI EL ARRAY TIENE 0 ELEMENTOS o si viene nulo */
 
 if (peliculasFav == null || peliculasFav.length == 0) {
     section.innerHTML = '<p>No hay personajes en favoritos</p>'
