@@ -99,12 +99,9 @@ fetch(urlReco)
   console.log('RECOMENDACIONES',data);
   for (let i = 0; i < 10; i++) {
     let popular = data.results[i];
-    seccion.innerHTML  += ` <article class="cuadrado thor uk-slider-items"> 
-    <a class="imagenreco" href="./detail-movie.html?idPelicula=${popular.id}">
-    <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
-    ${popular.title} (${popular.release_date})
-    </a>
-    </article> `
+
+
+    
     
   }
 

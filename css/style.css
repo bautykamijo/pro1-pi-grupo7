@@ -315,10 +315,23 @@ footer .footnombre{
     padding-right: 10px;
 }
 
+.titulos h2{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+
+}
+
 .hijosinopsis{
     padding: 15px 40px;
     background-color: rgba(10, 0, 0, 0.49);
+}
 
+.hijosinopsis h4, .hijosinopsis h3{
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bolder;
+    margin: 20px 0px;
 
 }
 
@@ -336,7 +349,7 @@ footer .footnombre{
 }
 
 .imagenThor{
-  
+    max-width: 420px ;
     width: 420px;
     height: 420px;
     padding: 25px 40px;
@@ -427,7 +440,7 @@ justify-content: center;
 .generoseries{
     width: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
 }
@@ -437,6 +450,28 @@ justify-content: center;
     display: flex;
     flex-direction: column;
 }
+
+.apeli {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.aserie {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .generofather div h2{
     display: flex;
@@ -742,15 +777,17 @@ justify-content: center;
 .generoseries{
     width: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
+
 }
 
 .generopeliculas{
     width: 50%;
     display: flex;
     flex-direction: column;
+
 }
 
 .generofather div h2{

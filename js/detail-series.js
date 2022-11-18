@@ -46,6 +46,7 @@ fetch(urlDetalles)
     genero.innerText = `${generos}`;
     boton.innerText = 'Ver recomendaciones';
     seccion.style.display = 'none';
+    trailervideo= 'https://youtu.be/Sog5AgxPwu0'
 
   return data;
 })
