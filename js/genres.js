@@ -4,10 +4,10 @@ let urlGenresSeries = `https://api.themoviedb.org/3/genre/tv/list?api_key=${apiK
 
 
 let titulopeli = document.querySelector('.titulopeli');
-let apeli = document.querySelector('.generopeliculas');
+let apeli = document.querySelector('.apeli');
 let tituloserie = document.querySelector('.tituloseries');
-let aserie = document.querySelector('.generoseries');
-titulopeli.innerText = 'Generos de Peliculas';
+let aserie = document.querySelector('.aserie');
+titulopeli.innerText = '  Generos de Peliculas';
 tituloserie.innerText = 'Generos de Series';
 
 fetch(urlGenresPelis)
@@ -18,9 +18,9 @@ fetch(urlGenresPelis)
 .then(function (data) {
     console.log(data);
     for (let i = 0; i < data.genres.length; i++) {
-       apeli.innerHTML += `<article class="cuadrado topg hijogenero">
-                          <a class="aclickeo" href="./detail-genres.html?idGenero=${data.genres[i].id}"><img src="" alt="" class="img1"> <br>${data.genres[i].name}</a>
-                           </article>`;
+       apeli.innerHTML += `<li class="listaGenero">
+                        <a class="aclickeo" href="./detail-genres.html?idGenero=${data.genres[i].id}">${data.genres[i].name}</a>
+                        </li>`;
        
        
     }
@@ -41,9 +41,9 @@ fetch(urlGenresSeries)
 .then(function (data) {
     console.log(data);
     for (let i = 0; i < data.genres.length; i++) {
-       aserie.innerHTML += `<article class="cuadrado topg hijogenero">
-                          <a class="aclickeo" href="./detail-genres.html?idGenero=${data.genres[i].id}"><img src="" alt="" class="img1"> <br>${data.genres[i].name}</a>
-                           </article>`;
+       aserie.innerHTML += `<li class="listaGenero">
+                          <a class="aclickeo" href="./detail-genres.html?idGenero=${data.genres[i].id}">${data.genres[i].name}</a>
+                          </li>`;
        
        
     }

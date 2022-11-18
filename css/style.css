@@ -427,7 +427,7 @@ justify-content: center;
 .generoseries{
     width: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
 }
@@ -437,6 +437,28 @@ justify-content: center;
     display: flex;
     flex-direction: column;
 }
+
+.apeli {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.aserie {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .generofather div h2{
     display: flex;
@@ -742,15 +764,17 @@ justify-content: center;
 .generoseries{
     width: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
+
 }
 
 .generopeliculas{
     width: 50%;
     display: flex;
     flex-direction: column;
+
 }
 
 .generofather div h2{
