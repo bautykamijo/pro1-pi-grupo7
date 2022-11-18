@@ -117,8 +117,8 @@ footer{
 footer .footnombre{
     display: flex;
     padding-left: 20px;
-    justify-content: left;
-    align-items: center;
+    justify-content: right;
+    align-items:center;
 }
 
 
@@ -817,6 +817,9 @@ justify-content: center;
     border-radius: 950px;
 }
 }
+
+
+
 
 
 
