@@ -12,7 +12,7 @@ console.log(peliculasFav);
 
 
 if (peliculasFav == null || peliculasFav.length == 0) {
-    section.innerHTML = '<p>No hay personajes en favoritos</p>'
+    section.innerHTML = '<p>No hay peliculas en favoritos</p>'
 }
 else {
     for (let i = 0; i < peliculasFav.length; i++) {
