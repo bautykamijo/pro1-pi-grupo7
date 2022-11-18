@@ -10,52 +10,44 @@
 </head>
 <body class="bodydegrade">
 
-<header>
-    <article class="logo"><img src="./img/logoDelyeMovies.png" alt="Logo DelyeMovies" class="logodelye"></article>
-
-    <nav>
-    <ul class="barranavheader">
-        <li class="itemshome"><a href="./index.html" class="ahrefheader">HOME</a></li>
-        <li class="itemshome"><a href="./detail-movie.html" class="ahrefheader">PELICULAS</a></li>
-        <li class="itemshome"><a href="./detail-serie.html" class="ahrefheader">SERIES</a></li>
-        <li class="itemshome"><a href="./favorite.html" class="ahrefheader">FAVORITOS</a></li>
-        <li class="itemshome"><a href="./genres.html" class="ahrefheader">GENEROS</a></li>
-        <li class="itemshome"><a href="./detail-genres.html" class="ahrefheader">DETALLES GENEROS</a></li>
-       
-     </ul>
-    </nav>
-
-   <div>
-    <form action="./search-results.html" method="get">
-        <input class="buscadoryboton" type="search" name="buscador" value="" placeholder="Peliculas, series...">
-    </form>
-</div>
-
-
-</header>
+    <header>
+        <article class="logo"><img src="./img/logoDelyeMovies.png" alt="Logo DelyeMovies" class="logodelye"></article>
+    
+        <nav>
+        <ul class="barranavheader">
+            <li class="itemshome"><a href="./index.html" class="ahrefheader">HOME</a></li>
+            <li class="itemshome"><a href="./favorite.html" class="ahrefheader">FAVORITOS</a></li>
+            <li class="itemshome"><a href="./genres.html" class="ahrefheader">GENEROS</a></li>
+          
+            
+         </ul>
+        </nav>
+    
+       <div class="divheader">
+        <form action="./search-results.html" method="get">
+            <input class="buscadoryboton" type="search" name="buscador" value="" placeholder="Peliculas, series...">
+        </form>
+    </div>
+    
+    
+    </header>
 
 <main>
 <br><br><br><br><br><br>
 <h2>Tus peliculas favoritas:</h2>
-<section class="padre">
+<section class="padre pelisFav">
     
-<article class="cuadrado thor"> <a class="aclickeo" href="./detail-movie.html"><img src=".//img/Thor_Amor_y_Trueno.jpg" alt="" class="img1">Thor: Love and Thunder (2022) <i class="fa-solid fa-star"></i></a></article>
-<article class="cuadrado elvis"> <a class="aclickeo" href="./detail-movie.html"><img src=".//img/elvis.jpg" alt="" class="img1">Elvis (2022) <i class="fa-solid fa-star"></i></a></article>
-<article class="cuadrado noch"> <a class="aclickeo" href="./detail-movie.html"><img src=".//img/avengersend.jpeg" alt="" class="img1">Avengers: EndGame (2019) <i class="fa-solid fa-star"></i></a></article>
-<article class="cuadrado topg"> <a class="aclickeo" href="./detail-movie.html"><img src=".//img/spidermannwh.jpg" alt="" class="img1">Spider Man: No Way Home (2021) <i class="fa-solid fa-star"></i></a></article>
-<article class="cuadrado thor"> <a class="aclickeo" href="./detail-movie.html"><img src=".//img/avataragua.jpg" alt=""class="img1"> Avatar (2009) <i class="fa-solid fa-star"></i></a></article>
 
 </section>
 <br><br>
 
 <h2>Tus series favoritas:</h2>
-<section class="seriesfav">
-<article class="cuadrado topg hijofav"> <a class="aclickeo" href="./detail-serie.html"><img src=".//img/stranger-things.jpg" alt="" class="img1">Stranger Things (2016) <i class="fa-solid fa-star"></i></a></article>
-<article class="cuadrado mini hijofav"> <a class="aclickeo" href="./detail-serie.html"><img src=".//img/modernfamily.jpg" alt="" class="img1">Modern Family (2009) <i class="fa-solid fa-star"></i></a></article>
-<article class="cuadrado noch hijofav"> <a class="aclickeo" href="./detail-serie.html"><img src=".//img/La_casa_de_papel.jpg" alt="" class="img1">La Casa De Papel (2017) <i class="fa-solid fa-star"></i></a></article>
+
+<section class="padre seriesFav">
+
+<section class="padre">
 
 
-   
 
 </section>
 </main>
@@ -68,5 +60,6 @@
 </footer>
 
 <script src="./js/validarForm.js"></script>
+<script src="./js/favorites.js"></script>
 </body> 
 </html>
