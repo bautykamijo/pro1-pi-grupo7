@@ -106,3 +106,4 @@ estrellita.addEventListener("click",function (e) {
     localStorage.setItem('favoritos',favToString)
     
 });
+let pelculas= meq
