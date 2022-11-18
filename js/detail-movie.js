@@ -7,7 +7,7 @@ urlDetalles = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${apiKey
 urlProviders = `https://api.themoviedb.org/3/movie/${idPelicula}/watch/providers?api_key=${apiKey}`;
 let urlReco = `https://api.themoviedb.org/3/movie/${idPelicula}/recommendations?api_key=${apiKey}&language=en-US&page=1`;
 let urlReviews = `https://api.themoviedb.org/3/movie/${idPelicula}/reviews?api_key=${apiKey}&language=en-US&page=1`;
-let urlGeneros = ``
+
 
 let titulo = document.querySelector('.peliculaDetalle');
 let img = document.querySelector('.imagenThor');
@@ -18,7 +18,7 @@ let overview = document.querySelector('.overview');
 let genero = document.querySelector('.genero');
 let provider = document.querySelector('.provider');
 let boton = document.querySelector('.botonera');
-let seccion = document.querySelector('.padre');
+let seccion = document.querySelector('.carrusel');
 let generoGlobal = document.querySelector('.generoGlobal');
 let generalizado = document.querySelector('.generalizado');
 let favorites = document.querySelector('.favorites');
@@ -100,8 +100,13 @@ fetch(urlReco)
   for (let i = 0; i < 10; i++) {
     let popular = data.results[i];
 
+    seccion.innerHTML += `<li>
+    <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
+    <div class="uk-position-center uk-panel"><h1></h1></div>
+</li>`
 
-    
+
+ 
     
   }
 

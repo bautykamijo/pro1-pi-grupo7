@@ -17,7 +17,7 @@ let duracion = document.querySelector('.duracion');
 let overview = document.querySelector('.overview');
 let genero = document.querySelector('.genero');
 let boton = document.querySelector('.botonera');
-let seccion = document.querySelector('.padre');
+let seccion = document.querySelector('.carrusel');
 let provider = document.querySelector('.provider');
 let reviews = document.querySelector('.reviews');
 let contenido = document.querySelector('.contenido');
@@ -98,12 +98,10 @@ fetch(urlReco)
   console.log('RECOMENDACIONES',data);
   for (let i = 0; i < 10; i++) {
     let popular = data.results[i];
-    seccion.innerHTML  += ` <article class="cuadrado thor uk-slider-items"> 
-    <a class="imagenreco" href="./detail-serie.html?idSeries=${popular.id}">
-    <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
-    ${popular.name} (${popular.first_air_date})
-    </a>
-    </article> `
+    seccion.innerHTML  += `<li>
+                              <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
+                              <div class="uk-position-center uk-panel"><h1></h1></div>
+                          </li>`
     
   }
 
