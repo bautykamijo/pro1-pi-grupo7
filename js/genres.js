@@ -10,6 +10,7 @@ let aserie = document.querySelector('.aserie');
 titulopeli.innerText = '  Generos de Peliculas';
 tituloserie.innerText = 'Generos de Series';
 
+/* agregando fetch de generos */
 fetch(urlGenresPelis)
 .then(function (response) {
     return response.json();
