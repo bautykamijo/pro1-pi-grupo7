@@ -22,7 +22,7 @@ let provider = document.querySelector('.provider');
 let reviews = document.querySelector('.reviews');
 let contenido = document.querySelector('.contenido');
 let autor = document.querySelector('.autor');
-
+let favoritismo = document.querySelector('.favoritismo')
 
 fetch(urlDetalles)
 .then(function(response) {
@@ -46,6 +46,7 @@ fetch(urlDetalles)
     genero.innerText = `${generos}`;
     boton.innerText = 'Ver recomendaciones';
     seccion.style.display = 'none';
+    trailervideo= 'https://youtu.be/Sog5AgxPwu0'
 
   return data;
 })
@@ -117,3 +118,47 @@ fetch(urlReco)
     return error;
 }
 )
+
+
+let seriesFav = [];
+
+let recuperoStorage = localStorage.getItem("seriesFav");
+
+if(recuperoStorage != null){
+  seriesFav = JSON.parse(recuperoStorage);
+}
+
+if (seriesFav.includes(idSeries)) {
+  favoritismo.innerHTML = `Quitar de Favoritos <i class="fa-solid fa-star"></i>`
+  favoritismo.style.color = 'rgb(255, 204, 0)';
+}
+else{
+  favoritismo.innerHTML = `Añadir a Favoritos <i class="fa-solid fa-star"></i>`
+  favoritismo.style.color = 'white';
+
+}
+
+favoritismo.addEventListener('click', function (e) {
+  e.preventDefault();
+  
+  if(seriesFav.includes(idSeries)){
+      let indice = seriesFav.indexOf(idSeries);
+      seriesFav.splice(indice,1);
+      favoritismo.style.color = 'white';
+      favoritismo.innerHTML = `Añadir a Favoritos <i class="fa-solid fa-star"></i>`
+
+  }else{
+    seriesFav.push(idSeries);
+      favoritismo.style.color = 'rgb(255, 204, 0)';
+      favoritismo.innerHTML = `Quitar de Favoritos <i class="fa-solid fa-star"></i>`
+
+  }
+
+ 
+  let favToString = JSON.stringify(seriesFav);
+
+  localStorage.setItem('seriesFav',favToString);
+  
+});
+
+
