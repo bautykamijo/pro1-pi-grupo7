@@ -3,12 +3,13 @@ let urlGenresPelis = `https://api.themoviedb.org/3/genre/movie/list?api_key=${ap
 let urlGenresSeries = `https://api.themoviedb.org/3/genre/tv/list?api_key=${apiKey}&language=en-US`
 
 
+
 let titulopeli = document.querySelector('.titulopeli');
 let apeli = document.querySelector('.apeli');
 let tituloserie = document.querySelector('.tituloseries');
 let aserie = document.querySelector('.aserie');
-titulopeli.innerText = '  Generos de Peliculas';
-tituloserie.innerText = 'Generos de Series';
+titulopeli.innerText = '  Géneros de Peliculas';
+tituloserie.innerText = 'Géneros de Series';
 
 /* agregando fetch de generos */
 fetch(urlGenresPelis)
@@ -43,7 +44,7 @@ fetch(urlGenresSeries)
     console.log(data);
     for (let i = 0; i < data.genres.length; i++) {
        aserie.innerHTML += `<li class="listaGenero">
-                          <a class="aclickeo" href="./detail-genres.html?idGenero=${data.genres[i].id}">${data.genres[i].name}</a>
+                          <a class="aclickeo" href="./detail-genres.html?idGenera=${data.genres[i].id}">${data.genres[i].name}</a>
                           </li>`;
        
        

@@ -49,7 +49,7 @@ overview.innerText = `${data.overview}`;
 estreno.innerText = `Fecha de estreno: ${data.release_date}`;
 popularidad.innerText = `Popularidad: ${data.popularity}`;
 duracion.innerText = `Duración: ${data.runtime}m`;
-generoGlobal.innerText = 'Generos: '
+generoGlobal.innerText = 'Generos: ';
 genero.innerText = `${generos}`;
 boton.innerText = 'Ver recomendaciones';
 favorites.style.color = 'white'
@@ -101,9 +101,11 @@ fetch(urlReco)
     let popular = data.results[i];
 
     seccion.innerHTML += `<li>
-    <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
-    <div class="uk-position-center uk-panel"><h1></h1></div>
-</li>`
+                          <a class="aclickeo" href="./detail-movie.html?idPelicula=${popular.id}">
+                          <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
+                          <div class="uk-position-center uk-panel"><h1></h1></div>
+                          </a>
+                          </li>`;
 
 
  

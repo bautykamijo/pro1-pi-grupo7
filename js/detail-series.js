@@ -99,8 +99,10 @@ fetch(urlReco)
   for (let i = 0; i < 10; i++) {
     let popular = data.results[i];
     seccion.innerHTML  += `<li>
+                              <a class="aclickeo" href="./detail-serie.html?idSeries=${popular.id}">
                               <img src="https://image.tmdb.org/t/p/w500/${popular.poster_path}" alt="" class="img1">
                               <div class="uk-position-center uk-panel"><h1></h1></div>
+                              </a>
                           </li>`
     
   }
