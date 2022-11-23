@@ -15,8 +15,7 @@ fetch(urlPopular)
 })
 .then(function(data) {
   console.log(data.results);
-  for (let i = 1; i < 7; i++) {
-    if (i != 2) {
+  for (let i = 0; i < 5; i++) {
   let popular = data.results[i]
   listaPopulares.innerHTML += ` <article class="cuadrado thor"> 
                                 <a class="aclickeo" href="./detail-movie.html?idPelicula=${popular.id}">
@@ -26,9 +25,6 @@ fetch(urlPopular)
                                 </article> `
     }
   
-                     
-    
-  }
   return data;
 })
 .catch(function(error) {
@@ -42,22 +38,15 @@ fetch(urlSeries)
 })
 .then(function(data) {
   console.log(data.results);
-  for (let i = 1; i < 9; i++) {
-    if (i != 5 && i != 3 && i != 7) {
-      
-    
+  for (let i = 0; i < 5; i++) {
   let series = data.results[i]
   seriesPopulares.innerHTML += ` <article class="cuadrado thor"> 
-                                <a class="aclickeo" href="./detail-serie.html?idSeries=${series.id}">
                                 <img src="https://image.tmdb.org/t/p/w500/${series.poster_path}" alt="" class="img1">
                                 ${series.name} (${series.first_air_date})
                                 </a>
                                 </article> `
   
                               }
-                     
-    
-  }
   return data;
 })
 .catch(function(error) {
